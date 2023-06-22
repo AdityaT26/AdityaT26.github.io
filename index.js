@@ -7,13 +7,13 @@ const contentDiv = document.querySelector('.content');
 const heroDiv = document.querySelector('.hero');
 
 let courses = {
-    //course no, title, prof, creds, rating, time in weeks, status, grade, enrollment, reviews
-    //    0        1     2      3      4          5           6       7        8         9
-    "MTH114" : ['1', 'MTH114', 'P. Shunmugraj', '6', '4.1', '6', 'Not Complete', '-', '200', '143'],
-    "LIF111" : ['2', 'LIF111', 'Big Chungus', '9', '4.6', '4-Online', 'Not Registered', '-', '632', '458'],
-    "ESC113" : ['3', 'ESC113', 'Smol Chungus', '11', '4.9', '4-Online', 'Complete', 'A', '134', '87'],
-    "PHY113" : ['4', 'PHY113', 'Zakir Hossain', '11', '5', '8', 'Not Complete', '-', '342', '327'],
-    "TA111"  : ['5', 'TA111', 'Ricardo', '11', '3.2', '8', 'Not Registered', '-', '71', '6']
+    //course no, title, prof, creds, rating, time in weeks, status, grade, enrollment, reviews, language, dep, mode
+    //    0        1     2      3      4          5           6       7        8         9         10     11    12
+    "MTH114" : ['1', 'MTH114', 'P. Shunmugraj', '6', '4.1', '6', 'Not Complete', '-', '200', '143', 'English', 'MTH', 'Offline'],
+    "LIF111" : ['2', 'LIF111', 'Big Chungus', '9', '4.6', '4', 'Not Registered', '-', '632', '458', 'English', 'BSBE', 'Online'],
+    "ESC113" : ['3', 'ESC113', 'Smol Chungus', '11', '4.9', '4', 'Complete', 'A', '134', '87', 'English', 'CSE', 'Online'],
+    "PHY113" : ['4', 'PHY113', 'Zakir Hossain', '11', '5', '8', 'Not Complete', '-', '342', '327', 'English', 'PHY', 'Offline'],
+    "TA111"  : ['5', 'TA111', 'Ricardo', '11', '3.2', '8', 'Not Registered', '-', '71', '6', 'English', 'CE', 'Offline']
 }
 
 let bkphero = '';
@@ -67,37 +67,88 @@ loginBt.addEventListener("click", function(){
 })
 
 function info(title){
-    //course no, title, prof, creds, rating, time in weeks, status, grade, enrollment, reviews
-    //    0        1     2      3      4          5           6       7        8         9
+    //course no, title, prof, creds, rating, time in weeks, status, grade, enrollment, reviews, language, dep, mode
+    //    0        1     2      3      4          5           6       7        8         9         10     11    12
     template = `
-    <h2 class="course-title">${courses[title][1]}</h2>
-    <div class="course-details">
-      <p class="label">Instructor: ${courses[title][2]}</p><br>
-      <p class="label">Credits: ${courses[title][3]}</p><br>
-      <p class="label">Enrollment Count: ${courses[title][8]}</p><br>
-      <p class="label">Review Count: ${courses[title][9]}</p><br>
-      <p class="label">Course Rating: ${courses[title][4]}/5</p><br>
+    <br>
+    <div style="background-color: rgba(255, 255, 255, 0.7); border-radius:6px; color:black;">
+    <br>
+      <h2>Course Information</h2>
+      <table>
+        <tr>
+          <th>Course Title:</th>
+          <td>${courses[title][1]}</td>
+        </tr>
+        <tr>
+          <th>Instructor Name:</th>
+          <td>${courses[title][2]}</td>
+        </tr>
+        <tr>
+          <th>Credits:</th>
+          <td>${courses[title][3]}</td>
+        </tr>
+        <tr>
+          <th>Weeks:</th>
+          <td>${courses[title][5]} Weeks</td>
+        </tr>
+        <tr>
+          <th>Enrollment Count:</th>
+          <td>${courses[title][8]}</td>
+        </tr>
+        <tr>
+          <th>Review Count:</th>
+          <td>${courses[title][9]}</td>
+        </tr>
+        <tr>
+          <th>Course Rating:</th>
+          <td>${courses[title][4]}/5</td>
+        </tr>
+        <tr>
+          <th>Course Description:</th>
+          <td>Sample Description</td>
+        </tr>
+        <tr>
+          <th>Reviews:</th>
+          <td>
+            <ul>
+              <li>4/5 Sample review 1</li>
+              <li>3/5 Another sample review 2</li>
+              <li>5/5 Last sample review 3</li>
+            </ul>
+          </td>
+        </tr>
+      </table>
     </div>
-    <div class="course-description">
-      <h3>Course Description</h3>
-      <p>This is a sample course description. This is a sample course description. This is a sample course description.</p>
+    <div style="background-color: rgba(255, 255, 255, 0.7); border-radius:6px; color:black;">
+    <br>
+      <h2>Additional Information</h2>
+      <table>
+        <tr>
+          <th>Course Language:</th>
+          <td>${courses[title][10]}</td>
+        </tr>
+        <tr>
+          <th>Course Mode:</th>
+          <td>${courses[title][12]}</td>
+        </tr>
+        <tr>
+          <th>Department:</th>
+          <td>${courses[title][11]}</td>
+        </tr>
+        <tr>
+          <th>Structure:</th>
+          <td>
+            <ul>
+              <li>Introduction (2 videos) </li>
+              <li>Getting in depth (7 videos) </li>
+              <li>Applications (6 videos)</li>
+              <li>Summary (2 videos)</li>
+            </ul>
+          </td>
+        </tr>
+      </table>
     </div>
-    <div class="reviews">
-      <h3>Reviews</h3>
-      <div class="review">
-        <p class="reviewer">Review 1 4/5:</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi.</p>
-      </div>
-      <div class="review">
-        <p class="reviewer">Review 2 5/5:</p>
-        <p>Maecenas cursus venenatis enim, sed dignissim sem mattis in.</p>
-      </div>
-      <div class="review">
-        <p class="reviewer">Review 3 3/5:</p>
-        <p>Fusce eget nisi eu diam vulputate pulvinar. Vivamus facilisis mauris nec lorem feugiat, sed lobortis nisi vestibulum.</p>
-      </div>
-      <button class="cta-button" type="button" onclick=courseLoad()>Go Back</button>
-    </div>`
+    <br>`
     renderDirect(template)
 }
 
@@ -145,8 +196,8 @@ function renderMiniCourses(num, title, prof, creds, grade){
 }
 
 function loadProfile(){
-    //course no, title, prof, creds, rating, time in weeks, status, grade
-    //    0        1     2      3      4          5           6       7
+    //course no, title, prof, creds, rating, time in weeks, status, grade, enrollment, reviews, language, dep, mode
+    //    0        1     2      3      4          5           6       7        8         9         10     11    12
     let comp = ''
     let incomp = ''
     
