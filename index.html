@@ -1,38 +1,40 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <link rel="stylesheet" href="style.css"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-        <div class="head">
-            <div class="top">
-                <ul>
-                    <li><image src="./media/icon.png"/></li>
-                    <li><h1>SESrock</h1></li>
-                </ul>
-            </div>
-            <div class="navbar">
-                <ul>
-                    <li><button type="button" id="home-bt">Home</button></li>
-                    <li><button type="button" id="courses-bt">Courses</button></li>
-                    <li><button type="button" id="profile-bt">My Profile</button></li>
-                    <li style="float:right"><button type="button" id="login-bt">Login</button></li>
-                </ul>
-            </div>
-        </div>
-        <br>
-        <div class="content">
-            <p>Content</p>
-        </div>
-        <br>
-        <div class="footer">
-            <ul style="list-style-type: none">
-                <li><h3>Contact Us</h3><h3 style="float:right; padding-right:25px;">&copy; 2023 SESrock. All rights reserved.</h3></li>
-                <li><h4>Ph. no. 9892984072</h4></li>
-                <li><h4>adit.thakur26@gmail.com</h4></li>
-             </ul>
-        </div>
-        <script src="index.js"></script>
-    </body>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="style.css"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Course Helper</title>
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="logo">SESrock</div>
+    <ul>
+      <li><button class="nav-button" type="button" id="home-bt">Home</button></li>
+      <li><button class="nav-button" type="button" id="courses-bt">Courses</button></li>
+      <li><button class="nav-button" type="button" id="profile-bt">Profile</button></li>
+      <li><button class="nav-button" type="button" id="login-bt">Login</button></li>
+    </ul>
+  </nav>
+
+  <div class="hero">
+    <div class="container">
+      <div class="content">
+        <h1>Welcome to SESrock, Life@IITK</h1>
+        <p>We make selecting and organizing your courses a breeze!</p>
+        <button class="cta-button" onclick=getStarted()>Get Started</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="container">
+      &copy; 2023 SESrock. All rights reserved.
+    </div>
+  </div>
+  <script src="index.js"></script>
+</body>
+
 </html>
