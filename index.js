@@ -2,6 +2,7 @@ const homeBt = document.getElementById("home-bt")
 const coursesBt = document.getElementById("courses-bt")
 const profileBt = document.getElementById("profile-bt")
 const loginBt = document.getElementById("login-bt")
+const submitCrBt = document.getElementById("submitC-bt")
 const contentDiv = document.querySelector('.content');
 const heroDiv = document.querySelector('.hero');
 
@@ -9,8 +10,8 @@ let courses = {
     //course no, title, prof, creds, rating, time in weeks, status, grade, enrollment, reviews
     //    0        1     2      3      4          5           6       7        8         9
     "MTH114" : ['1', 'MTH114', 'P. Shunmugraj', '6', '4.1', '6', 'Not Complete', '-', '200', '143'],
-    "LIF111" : ['2', 'LIF111', 'Big Chungus', '9', '4.6', '4', 'Not Registered', '-', '632', '458'],
-    "ESC113" : ['3', 'ESC113', 'Smol Chungus', '11', '4.9', '4', 'Complete', 'A', '134', '87'],
+    "LIF111" : ['2', 'LIF111', 'Big Chungus', '9', '4.6', '4-Online', 'Not Registered', '-', '632', '458'],
+    "ESC113" : ['3', 'ESC113', 'Smol Chungus', '11', '4.9', '4-Online', 'Complete', 'A', '134', '87'],
     "PHY113" : ['4', 'PHY113', 'Zakir Hossain', '11', '5', '8', 'Not Complete', '-', '342', '327'],
     "TA111"  : ['5', 'TA111', 'Ricardo', '11', '3.2', '8', 'Not Registered', '-', '71', '6']
 }
@@ -84,15 +85,15 @@ function info(title){
     <div class="reviews">
       <h3>Reviews</h3>
       <div class="review">
-        <p class="reviewer">Review 1:</p>
+        <p class="reviewer">Review 1 4/5:</p>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi.</p>
       </div>
       <div class="review">
-        <p class="reviewer">Review 2:</p>
+        <p class="reviewer">Review 2 5/5:</p>
         <p>Maecenas cursus venenatis enim, sed dignissim sem mattis in.</p>
       </div>
       <div class="review">
-        <p class="reviewer">Review 3:</p>
+        <p class="reviewer">Review 3 3/5:</p>
         <p>Fusce eget nisi eu diam vulputate pulvinar. Vivamus facilisis mauris nec lorem feugiat, sed lobortis nisi vestibulum.</p>
       </div>
       <button class="cta-button" type="button" onclick=courseLoad()>Go Back</button>
@@ -187,6 +188,10 @@ function courseLoad(){
 coursesBt.addEventListener("click", function(){
     loginscreen = false
     courseLoad()    
+})
+
+submitCrBt.addEventListener("click", function(){
+    render("submit.html")
 })
 
 function alterPswd(){
