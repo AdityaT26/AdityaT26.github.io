@@ -21,7 +21,8 @@ body {
     display: flex;
     justify-content: space-between;
     padding: 20px;
-    min-width: 100%;
+    width: 100%;
+    overflow: auto;
 }
 
 .navbar .logo {
@@ -101,6 +102,7 @@ body {
     text-align: center;
     font-size: 14px;
     min-width: 100%;
+    overflow: auto;
 }
 
 /*-------------- login.html --------------*/
