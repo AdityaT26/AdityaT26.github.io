@@ -1,0 +1,24 @@
+<h2>Submit Your Course</h2>
+    <form>
+      <div class="form-group">
+        <label for="course-title">Course Title:</label>
+        <input type="text" id="course-title" name="course-title" required>
+      </div>
+      <div class="form-group">
+        <label for="instructor-name">Instructor Name:</label>
+        <input type="text" id="instructor-name" name="instructor-name" required>
+      </div>
+      <div class="form-group">
+        <label for="credits">Credits:</label>
+        <input type="number" id="credits" name="credits" min="3" max="12" required>
+      </div>
+      <div class="form-group">
+        <label for="weeks">Weeks:</label>
+        <input type="number" id="weeks" name="weeks" min="1" max="12" required>
+      </div>
+      <div class="form-group">
+        <label for="zip-file">Upload Course Zip:</label>
+        <input type="file" id="zip-file" name="zip-file" accept=".zip" required>
+      </div>
+      <button type="submit" class="cta-button" id="submit-btn">Submit</button>
+    </form>
