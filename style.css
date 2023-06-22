@@ -12,6 +12,7 @@ body {
     background-position: center;
     background-attachment: fixed;
     
+    display: block;
     overflow: auto;
 }
 
@@ -22,7 +23,6 @@ body {
     padding: 20px;
     width: 100%;
     overflow: auto;
-    display: block;
 }
 
 .navbar .logo {
@@ -112,7 +112,7 @@ body {
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 40px;
-    max-width: 400px;
+    max-width: 300px;
     width: 100%;
     text-align: center;
     
@@ -361,4 +361,46 @@ body {
 
   .review .reviewer {
     font-weight: bold;
+  }
+
+/*-------------- submit course --------------*/
+
+  .form-group {
+    margin-bottom: 20px;
+  }
+
+  .form-group label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  .form-group input[type="file"] {
+    padding: 6px;
+  }
+
+  .form-group textarea {
+    resize: vertical;
+    height: 80px;
+  }
+
+  .submit-btn {
+    background-color: #4caf50;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .submit-btn:hover {
+    background-color: #45a049;
   }
