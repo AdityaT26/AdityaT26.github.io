@@ -12,7 +12,6 @@ body {
     background-position: center;
     background-attachment: fixed;
     
-    display: block;
     overflow: auto;
 }
 
