@@ -148,7 +148,9 @@ function info(title){
         </tr>
       </table>
     </div>
-    <br>`
+    <br>
+    <button type="button" class="cta-button" onclick = loadCourses()>Go Back</button>
+    <br><br>`
     renderDirect(template)
 }
 
@@ -227,7 +229,7 @@ profileBt.addEventListener("click", function(){
     loadProfile()
 })
 
-function courseLoad(){
+function loadCourses(){
     temp = ''
     for(let key in courses) {
         temp += renderCourses(courses[key][0], courses[key][1], courses[key][2], courses[key][3], courses[key][4], courses[key][5], courses[key][6])
@@ -238,7 +240,7 @@ function courseLoad(){
 
 coursesBt.addEventListener("click", function(){
     loginscreen = false
-    courseLoad()    
+    loadCourses()    
 })
 
 submitCrBt.addEventListener("click", function(){
